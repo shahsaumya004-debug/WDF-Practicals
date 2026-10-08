@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Enrolled Courses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Institutional Header -->
+    <header class="college-header">
+        <div class="header-inner">
+            <a href="home.html" class="brand-section">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Apex Institute of Engineering & Technology</h1>
+                    <p>Student Academic Information & Learning Management System</p>
+                </div>
+            </a>
+            <div class="header-meta">
+                <span class="term-badge">Session 2026-27 | Semester V</span>
+                <a href="profile.html" class="user-quick-profile">
+                    <div class="avatar-initials">RS</div>
+                    <div class="user-quick-info">
+                        <div class="user-quick-name">Rahul Sharma</div>
+                        <div class="user-quick-role">Student (CE501)</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Unified Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="mobile-toggle-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="home.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="profile.html" class="nav-link"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="courses.html" class="nav-link active"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li><a href="attendance.html" class="nav-link"><i class="fa-solid fa-clipboard-user"></i> Attendance</a></li>
+                <li><a href="assignments.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Assignments</a></li>
+                <li><a href="result.html" class="nav-link"><i class="fa-solid fa-chart-simple"></i> Result</a></li>
+                <li><a href="fee-status.html" class="nav-link"><i class="fa-solid fa-receipt"></i> Fee Status</a></li>
+                <li><a href="announcements.html" class="nav-link"><i class="fa-solid fa-bullhorn"></i> Announcements</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-btn-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="portal-container">
+
+        <!-- Page Header Banner -->
+        <div class="page-header-banner">
+            <div class="page-title-group">
+                <h2><i class="fa-solid fa-book-open"></i> Curriculum Catalog & Courses</h2>
+                <p>Rendered dynamically from external JSON using JavaScript <code>fetch()</code> API with real-time Search & Filter</p>
+            </div>
+            <div class="banner-actions">
+                <span class="badge badge-info" style="font-size: 13px; padding: 8px 14px;">
+                    <i class="fa-solid fa-cloud-arrow-down"></i> <span id="apiStatusBadge">Fetch API Active</span>
+                </span>
+                <button class="btn btn-outline" id="refreshDataBtn">
+                    <i class="fa-solid fa-arrows-rotate"></i> Re-Fetch JSON
+                </button>
+            </div>
+        <!-- Practical Requirement Demonstration Banner -->
+        <div class="practical-info-box">
+            <strong><i class="fa-solid fa-code"></i> Practical Concept Demonstration:</strong>
+            <p>This page demonstrates <strong>Rendering External JSON Data using JavaScript Fetch API</strong> along with real-time <strong>Search & Filter</strong>. All course data is loaded asynchronously from <code>courses.json</code> and filtered dynamically as you type or change dropdown selections.</p>
+        </div>
+
+        <!-- Course Summary KPIs -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Available Courses</h3>
+                    <div class="stat-value" id="kpiTotalCourses">8</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-success"><i class="fa-solid fa-check"></i> JSON Loaded</span>
+                    </div>
+                </div>
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-book-journal-whills"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Total Credits</h3>
+                    <div class="stat-value" id="kpiTotalCredits">31</div>
+                    <div class="stat-desc">
+                        <span>Curriculum Total</span>
+                    </div>
+                </div>
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Faculty Mentors</h3>
+                    <div class="stat-value" id="kpiFacultyCount">8</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-info">Course Directors</span>
+                    </div>
+                </div>
+                <div class="stat-icon amber">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Data Source</h3>
+                    <div class="stat-value" style="font-size: 20px;">courses.json</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-success"><i class="fa-solid fa-code"></i> Fetch API</span>
+                    </div>
+                </div>
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-file-code"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Search and Filter Controls Card -->
+        <div class="portal-card" style="padding: 20px 24px; margin-bottom: 24px;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 14px; align-items: center;">
+                
+                <!-- Keyword Search -->
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass input-icon"></i>
+                    <input
+                        type="text"
+                        id="courseSearchInput"
+                        class="form-control has-icon"
+                        placeholder="Search by course title, code (e.g. CE501), or faculty..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <!-- Category Filter -->
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-filter input-icon"></i>
+                    <select id="courseCategoryFilter" class="form-control has-icon">
+                        <option value="all">All Categories</option>
+                        <option value="Core Engineering">Core Engineering</option>
+                        <option value="Basic Science">Basic Science</option>
+                        <option value="Professional Elective">Professional Elective</option>
+                        <option value="Open Elective">Open Elective</option>
+                    </select>
+                </div>
+
+                <!-- Credits Filter -->
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-award input-icon"></i>
+                    <select id="courseCreditsFilter" class="form-control has-icon">
+                        <option value="all">All Credits</option>
+                        <option value="3">3 Credits</option>
+                        <option value="4">4 Credits</option>
+                        <option value="5">5 Credits</option>
+                    </select>
+                </div>
+
+                <!-- Reset Filters Button -->
+                <div>
+                    <button type="button" id="resetCourseFiltersBtn" class="btn btn-outline" style="padding: 11px 16px;">
+                        <i class="fa-solid fa-rotate-left"></i> Reset
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Active Filter Status & Result Counter -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border-light); font-size: 13px; color: var(--text-muted);">
+                <div>
+                    <span>Results: </span>
+                    Showing <strong id="courseCount" style="color: var(--primary);">0</strong> of <strong id="totalCourseCount" style="color: var(--text-main);">0</strong> courses matching criteria
+                </div>
+                <div id="filterTagContainer" style="display: flex; gap: 6px;"></div>
+            </div>
+        </div>
+
+        <!-- Courses Table Card -->
+        <div class="portal-card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fa-solid fa-list-check"></i> Dynamic Course Curriculum Catalog
+                </h3>
+                <span class="badge badge-secondary">Academic Session 2026-27</span>
+            </div>
+
+            <!-- Loading Spinner State -->
+            <div id="courseLoading" style="text-align: center; padding: 40px 20px;">
+                <i class="fa-solid fa-spinner fa-spin" style="font-size: 32px; color: var(--accent); margin-bottom: 12px;"></i>
+                <p style="color: var(--text-muted); font-size: 14px;">Fetching course data from <code>courses.json</code> using Fetch API...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="courseError" style="display: none; text-align: center; padding: 30px; background: #fef2f2; border: 1px solid #fecaca; border-radius: var(--radius-sm); margin: 20px;">
+                <i class="fa-solid fa-triangle-exclamation" style="font-size: 28px; color: #dc2626; margin-bottom: 8px;"></i>
+                <p style="font-weight: 700; color: #991b1b;">Failed to fetch external JSON dataset.</p>
+                <p style="font-size: 13px; color: #7f1d1d; margin-top: 4px;" id="courseErrorMsg"></p>
+                <button class="btn btn-sm btn-primary" style="margin-top: 14px;" onclick="loadCoursesViaFetch()">Retry Fetch</button>
+            </div>
+
+            <!-- Empty / No Results Found State -->
+            <div id="courseEmpty" style="display: none; text-align: center; padding: 40px 20px;">
+                <i class="fa-solid fa-magnifying-glass" style="font-size: 32px; color: var(--text-subtle); margin-bottom: 12px;"></i>
+                <h4 style="font-size: 16px; color: var(--text-main); margin-bottom: 4px;">No matching courses found</h4>
+                <p style="color: var(--text-muted); font-size: 13px;">Try adjusting your keyword search or filter criteria.</p>
+            </div>
+
+            <!-- Dynamic Table Container -->
+            <div class="table-responsive" id="courseTableContainer" style="display: none;">
+                <table class="portal-table courses-table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Course Title & Type</th>
+                            <th>Category</th>
+                            <th>Credits</th>
+                            <th>Faculty In-Charge</th>
+                            <th style="text-align: right;">Learning Resources</th>
+                        </tr>
+                    </thead>
+                    <tbody id="coursesTableBody">
+                        <!-- Populated dynamically via Fetch API in script.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Institutional Footer -->
+    <footer class="portal-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Apex Institute of Engineering & Technology. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a></li>
+                <li><a href="#"><i class="fa-solid fa-headset"></i> IT Helpdesk</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i> Course Regulations</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

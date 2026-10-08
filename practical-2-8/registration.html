@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Institutional Header -->
+    <header class="college-header">
+        <div class="header-inner">
+            <a href="home.html" class="brand-section">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Apex Institute of Engineering & Technology</h1>
+                    <p>Student Academic Information & Learning Management System</p>
+                </div>
+            </a>
+            <div class="header-meta">
+                <span class="term-badge">New Student Enrollment</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Registration Section -->
+    <main class="auth-wrapper">
+        <div class="auth-card auth-card-wide">
+
+            <div class="auth-header">
+                <div class="auth-crest">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <h2>Student Portal Registration</h2>
+                <p>Create your verified institutional student account with secure frontend validation</p>
+            </div>
+
+            <!-- Global Form Error / Success Alert Banner -->
+            <div id="formAlertBanner" class="form-alert-banner">
+                <i class="fa-solid fa-circle-exclamation" style="font-size: 18px;"></i>
+                <div id="formAlertText"></div>
+            </div>
+
+            <form id="registerForm" action="home.html" novalidate>
+
+                <!-- Row 1: Full Name & Enrollment No -->
+                <div class="form-row">
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label class="form-label" for="fullname">
+                            Full Name <span style="color: var(--danger);">*</span>
+                            <span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">(As per college records)</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user input-icon"></i>
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                class="form-control has-icon"
+                                placeholder="e.g. Rahul S. Sharma"
+                                autocomplete="name"
+                            >
+                            <i class="fa-solid fa-circle-check validation-icon success"></i>
+                            <i class="fa-solid fa-circle-exclamation validation-icon error"></i>
+                        </div>
+                        <div class="field-error-msg" id="fullname-error">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <!-- Enrollment Number -->
+                    <div class="form-group">
+                        <label class="form-label" for="enrollment">
+                            Enrollment Number <span style="color: var(--danger);">*</span>
+                            <span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">(11-12 digits)</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-id-badge input-icon"></i>
+                            <input
+                                type="text"
+                                id="enrollment"
+                                name="enrollment"
+                                class="form-control has-icon"
+                                placeholder="e.g. 24012011001"
+                                maxlength="12"
+                            >
+                            <i class="fa-solid fa-circle-check validation-icon success"></i>
+                            <i class="fa-solid fa-circle-exclamation validation-icon error"></i>
+                        </div>
+                        <div class="field-error-msg" id="enrollment-error">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: College Email & Mobile -->
+                <div class="form-row">
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label class="form-label" for="email">
+                            Institutional Email <span style="color: var(--danger);">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope input-icon"></i>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-control has-icon"
+                                placeholder="e.g. rahul.sharma@apex.edu.in"
+                                autocomplete="email"
+                            >
+                            <i class="fa-solid fa-circle-check validation-icon success"></i>
+                            <i class="fa-solid fa-circle-exclamation validation-icon error"></i>
+                        </div>
+                        <div class="field-error-msg" id="email-error">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="form-group">
+                        <label class="form-label" for="mobile">
+                            Mobile Number <span style="color: var(--danger);">*</span>
+                            <span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">(10 digits)</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone input-icon"></i>
+                            <input
+                                type="tel"
+                                id="mobile"
+                                name="mobile"
+                                class="form-control has-icon"
+                                placeholder="e.g. 9876543210"
+                                maxlength="10"
+                            >
+                            <i class="fa-solid fa-circle-check validation-icon success"></i>
+                            <i class="fa-solid fa-circle-exclamation validation-icon error"></i>
+                        </div>
+                        <div class="field-error-msg" id="mobile-error">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Department & Semester -->
+                <div class="form-row">
+                    <!-- Department -->
+                    <div class="form-group">
+                        <label class="form-label" for="department">
+                            Academic Department <span style="color: var(--danger);">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-building-columns input-icon"></i>
+                            <select id="department" name="department" class="form-control has-icon">
+                                <option value="">-- Choose Department --</option>
+                                <option value="Computer Engineering">Computer Engineering</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Electronics & Communication">Electronics & Communication</option>
+                                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                <option value="Civil Engineering">Civil Engineering</option>
+                                <option value="Electrical Engineering">Electrical Engineering</option>
+                            </select>
+                        </div>
+                        <div class="field-error-msg" id="department-error">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <!-- Semester -->
+                    <div class="form-group">
+                        <label class="form-label" for="semester">
+                            Current Semester <span style="color: var(--danger);">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-calendar-days input-icon"></i>
+                            <select id="semester" name="semester" class="form-control has-icon">
+                                <option value="">-- Choose Semester --</option>
+                                <option value="Semester 1">Semester 1 (Year 1)</option>
+                                <option value="Semester 2">Semester 2 (Year 1)</option>
+                                <option value="Semester 3">Semester 3 (Year 2)</option>
+                                <option value="Semester 4">Semester 4 (Year 2)</option>
+                                <option value="Semester 5">Semester 5 (Year 3)</option>
+                                <option value="Semester 6">Semester 6 (Year 3)</option>
+                                <option value="Semester 7">Semester 7 (Year 4)</option>
+                                <option value="Semester 8">Semester 8 (Year 4)</option>
+                            </select>
+                        </div>
+                        <div class="field-error-msg" id="semester-error">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4: Password & Confirm Password -->
+                <div class="form-row">
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label class="form-label" for="password">
+                            Create Password <span style="color: var(--danger);">*</span>
+                        </label>
+                        <div class="input-wrapper has-toggle">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="form-control has-icon"
+                                placeholder="Min. 8 characters"
+                                autocomplete="new-password"
+                            >
+                            <i class="fa-solid fa-circle-check validation-icon success"></i>
+                            <i class="fa-solid fa-circle-exclamation validation-icon error"></i>
+                            <i class="fa-solid fa-eye toggle-password" data-target="password" style="position:absolute; right:14px; cursor:pointer; color:var(--text-subtle);" title="Toggle password visibility"></i>
+                        </div>
+                        <div class="field-error-msg" id="password-error">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+                        <label class="form-label" for="confirm">
+                            Confirm Password <span style="color: var(--danger);">*</span>
+                        </label>
+                        <div class="input-wrapper has-toggle">
+                            <i class="fa-solid fa-lock-check input-icon"></i>
+                            <input
+                                type="password"
+                                id="confirm"
+                                name="confirm"
+                                class="form-control has-icon"
+                                placeholder="Re-enter password"
+                                autocomplete="new-password"
+                            >
+                            <i class="fa-solid fa-circle-check validation-icon success"></i>
+                            <i class="fa-solid fa-circle-exclamation validation-icon error"></i>
+                            <i class="fa-solid fa-eye toggle-password" data-target="confirm" style="position:absolute; right:14px; cursor:pointer; color:var(--text-subtle);" title="Toggle password visibility"></i>
+                        </div>
+                        <div class="field-error-msg" id="confirm-error">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Password Strength & Requirements Checklist -->
+                <div class="password-strength-box" id="passwordStrengthBox">
+                    <div class="strength-header">
+                        <span><i class="fa-solid fa-shield-halved"></i> Password Security Assessment:</span>
+                        <span id="strengthText" style="color: var(--text-muted);">None</span>
+                    </div>
+                    <div class="strength-meter-bar">
+                        <div class="strength-meter-fill" id="strengthMeterFill"></div>
+                    </div>
+                    <ul class="password-rules">
+                        <li id="rule-length"><i class="fa-regular fa-circle"></i> Min. 8 characters</li>
+                        <li id="rule-upper"><i class="fa-regular fa-circle"></i> 1 uppercase letter (A-Z)</li>
+                        <li id="rule-lower"><i class="fa-regular fa-circle"></i> 1 lowercase letter (a-z)</li>
+                        <li id="rule-number"><i class="fa-regular fa-circle"></i> 1 number (0-9)</li>
+                        <li id="rule-special"><i class="fa-regular fa-circle"></i> 1 special symbol (!@#$%^&*)</li>
+                        <li id="rule-match"><i class="fa-regular fa-circle"></i> Passwords must match</li>
+                    </ul>
+                </div>
+
+                <!-- Terms & Conditions Checkbox -->
+                <div class="form-group" style="margin-top: 18px; margin-bottom: 8px;">
+                    <label class="checkbox-label" for="terms">
+                        <input type="checkbox" id="terms" name="terms">
+                        <span>I certify that all details are accurate and agree to the College IT Security Policy and Student Code of Conduct. <span style="color: var(--danger);">*</span></span>
+                    </label>
+                    <div class="field-error-msg" id="terms-error">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span></span>
+                    </div>
+                </div>
+
+                <!-- Submit & Clear Buttons -->
+                <div style="display:flex; gap:12px; margin-top:24px;">
+                    <button type="submit" id="submitBtn" class="btn btn-primary" style="flex:1;">
+                        <i class="fa-solid fa-user-check"></i> Complete Registration
+                    </button>
+                    <button type="button" id="resetBtn" class="btn btn-outline" style="width:100px;">
+                        Reset
+                    </button>
+                </div>
+
+            </form>
+
+            <div class="auth-footer">
+                <p>
+                    Already registered with the portal?
+                    <a href="login.html">Return to Login <i class="fa-solid fa-arrow-right"></i></a>
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Institutional Footer -->
+    <footer class="portal-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Apex Institute of Engineering & Technology. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a></li>
+                <li><a href="#"><i class="fa-solid fa-headset"></i> IT Helpdesk</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i> Student Handbook</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

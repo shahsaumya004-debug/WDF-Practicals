@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "code": "CE501",
+    "title": "Object Oriented Programming",
+    "category": "Core Engineering",
+    "semester": 5,
+    "credits": 4,
+    "type": "Theory + Practical Lab",
+    "faculty": "Prof. R. K. Patel",
+    "facultyInitials": "RK",
+    "resources": "https://www.youtube.com/watch?v=ntLJmHOJ0ME&list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q"
+  },
+  {
+    "id": 2,
+    "code": "CE502",
+    "title": "Discrete Mathematics",
+    "category": "Basic Science",
+    "semester": 5,
+    "credits": 4,
+    "type": "Theory & Tutorial",
+    "faculty": "Dr. S. Sen",
+    "facultyInitials": "SS",
+    "resources": "https://www.youtube.com/watch?v=YBb2oYIzXK0&list=PLxCzCOWd7aiH2wwES9vPWsEL6ipTaUSl3"
+  },
+  {
+    "id": 3,
+    "code": "CE503",
+    "title": "Fundamentals of Computer Networks",
+    "category": "Core Engineering",
+    "semester": 5,
+    "credits": 4,
+    "type": "Theory + Packet Tracer Lab",
+    "faculty": "Dr. A. K. Verma",
+    "facultyInitials": "AV",
+    "resources": "https://www.youtube.com/watch?v=VwN91x5i25g&list=PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx"
+  },
+  {
+    "id": 4,
+    "code": "CE504",
+    "title": "Fundamentals of Data Structures & Algorithms",
+    "category": "Core Engineering",
+    "semester": 5,
+    "credits": 5,
+    "type": "Advanced Theory + Coding Lab",
+    "faculty": "Prof. N. Mehta",
+    "facultyInitials": "NM",
+    "resources": "https://www.youtube.com/watch?v=0bHoB32fuj0&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz"
+  },
+  {
+    "id": 5,
+    "code": "CE505",
+    "title": "Web Development Framework",
+    "category": "Professional Elective",
+    "semester": 5,
+    "credits": 4,
+    "type": "Full-Stack Web Practical Lab",
+    "faculty": "Prof. P. Joshi",
+    "facultyInitials": "PJ",
+    "resources": "https://www.youtube.com/watch?v=tVzUXW6siu0&list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w"
+  },
+  {
+    "id": 6,
+    "code": "CE506",
+    "title": "Cloud Computing & DevOps Architecture",
+    "category": "Professional Elective",
+    "semester": 5,
+    "credits": 3,
+    "type": "Hands-on Lab Simulation",
+    "faculty": "Prof. V. Sharma",
+    "facultyInitials": "VS",
+    "resources": "https://www.youtube.com/watch?v=M5y0rB8D2Vw"
+  },
+  {
+    "id": 7,
+    "code": "CE507",
+    "title": "Artificial Intelligence & Neural Networks",
+    "category": "Open Elective",
+    "semester": 5,
+    "credits": 4,
+    "type": "Theory & Model Evaluation",
+    "faculty": "Dr. M. Trivedi",
+    "facultyInitials": "MT",
+    "resources": "https://www.youtube.com/watch?v=JMUxmLyrhSk"
+  },
+  {
+    "id": 8,
+    "code": "CE508",
+    "title": "Cyber Security & Information Assurance",
+    "category": "Open Elective",
+    "semester": 5,
+    "credits": 3,
+    "type": "Security Lab Case Studies",
+    "faculty": "Prof. H. Dave",
+    "facultyInitials": "HD",
+    "resources": "https://www.youtube.com/watch?v=inWWhr5tnEA"
+  }
+]

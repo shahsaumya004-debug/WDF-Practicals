@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Semester Examination Schedule Released",
+    "category": "exam",
+    "categoryLabel": "Examination",
+    "isUrgent": true,
+    "day": "15",
+    "month": "Aug",
+    "description": "The Semester 5 final theory and practical university examination timetable has been officially ratified by the Academic Council and published. Students must download their individual hall tickets 7 days prior to commencement.",
+    "authority": "Controller of Examinations",
+    "attachment": "Timetable_Sem5_2026.pdf (1.2 MB)"
+  },
+  {
+    "id": 2,
+    "title": "Assignment Submission: Web Development Framework",
+    "category": "academic",
+    "categoryLabel": "Academic Task",
+    "isUrgent": false,
+    "day": "25",
+    "month": "Aug",
+    "description": "All students of Computer Engineering are reminded to submit their Assignment 1: Web Development Framework portfolio project by 25 August 2026. Submissions through the portal will automatically close at 11:59 PM.",
+    "authority": "Department of Computer Engineering",
+    "postedTime": "Posted Yesterday"
+  },
+  {
+    "id": 3,
+    "title": "Campus Placement Drive 2026-27 Registration",
+    "category": "placement",
+    "categoryLabel": "Training & Placement",
+    "isUrgent": false,
+    "day": "30",
+    "month": "Aug",
+    "description": "Campus placement registration for tier-1 IT software companies closes strictly on 30 August 2026. Students maintaining a CGPA of 7.5 or above with zero active backlogs are eligible to submit their verified resumes.",
+    "authority": "Training & Placement Cell",
+    "postedTime": "Posted 2 days ago"
+  },
+  {
+    "id": 4,
+    "title": "Semester Fee Payment Final Reminder",
+    "category": "academic",
+    "categoryLabel": "Accounts & Finance",
+    "isUrgent": false,
+    "day": "31",
+    "month": "Aug",
+    "description": "Students who have not completed their term fee installment are instructed to complete fee payment before 31 August 2026 to avoid late registration penalties. Download receipts directly from the Fee Status module.",
+    "authority": "Accounts & Finance Section",
+    "postedTime": "Posted 3 days ago"
+  },
+  {
+    "id": 5,
+    "title": "Annual Inter-College Hackathon 2026",
+    "category": "event",
+    "categoryLabel": "Technical Event",
+    "isUrgent": false,
+    "day": "18",
+    "month": "Aug",
+    "description": "Registration open for teams of 3-4 students. Exciting prizes and placement opportunities. Venue: Computer Laboratory 2 (New Block).",
+    "authority": "Student Technical Committee",
+    "postedTime": "Posted 4 days ago"
+  }
+]

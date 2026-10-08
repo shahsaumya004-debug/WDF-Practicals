@@ -1,0 +1,265 @@
+https://github.com/shahsaumya004-debug/WDF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: navy;
+            color: white;
+            padding: 20px 50px;
+        }
+         nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #ffffff;
+            color: navy;
+        }
+         .clubs-section {
+            padding: 40px 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: navy;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .club-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .club-card {
+            background-color: white;
+            width: 300px;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px navy;
+            
+        }
+
+        .club-card:hover {
+            box-shadow: 0 10px 20px navy;
+            border-color: #17365d;
+        }
+
+        .club-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .club-card h3 {
+            color: navy;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .club-card p {
+            color: grey;
+            margin-bottom: 20px;
+        }
+
+        
+
+   
+        .gallery-section {
+            background-color: white;
+            padding: 40px 50px;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-item {
+            width: 250px;
+            height: 190px;
+            padding: 5px;
+            border: 3px solid navy;
+            border-radius: 10px;
+            
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+
+        }
+
+        .gallery-item:hover {
+            box-shadow: 0 0 10px blue;
+        }
+
+       
+        footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <div class="college-name">
+                CHARUSAT
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#clubs">Clubs</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <section class="clubs-section" id="clubs">
+        <h2 class="section-title">
+            Our Clubs
+        </h2>
+        <div class="club-container">
+            <div class="club-card">
+                <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+                    alt="Technical Club"
+                >
+
+                <h3>Technical Club</h3>
+
+                <p>
+                    The Technical Club encourages students to explore
+                    technology, innovation, electronics and modern
+                    engineering concepts.
+                </p>
+            </div>
+
+            <div class="club-card">
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+                    alt="Coding Club"
+                >
+
+                <h3>Coding Club</h3>
+
+                <p>
+                    The Coding Club helps students improve their
+                    programming skills through coding competitions,
+                    workshops and problem-solving activities.
+                </p>
+            </div>
+
+            <div class="club-card">
+                <img
+                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80"
+                    alt="Robotics Club"
+                >
+
+                <h3>Robotics Club</h3>
+
+                <p>
+                    The Robotics Club allows students to design,
+                    build and program robots while participating
+                    in innovative technical projects.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="gallery-section" id="gallery">
+
+        <h2 class="section-title">
+            Club Activity Gallery
+        </h2>
+
+        <div class="gallery-container">
+
+            <div class="gallery-item">
+                <img
+                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80"
+                    alt="Students working together"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
+                    alt="Student team activity"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80"
+                    alt="Technical activity"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80"
+                    alt="Robotics activity"
+                >
+            </div>
+
+        </div>
+
+    </section>
+    <footer id="contact">
+
+        <p>
+            <strong>CHARUSAT, Anand</strong>
+        </p>
+
+        <p>
+            College Club Activities – 2026
+        </p>
+
+    </footer>
+    </body>
+</html>

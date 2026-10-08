@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Institutional Header -->
+    <header class="college-header">
+        <div class="header-inner">
+            <a href="home.html" class="brand-section">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Apex Institute of Engineering & Technology</h1>
+                    <p>Student Academic Information & Learning Management System</p>
+                </div>
+            </a>
+            <div class="header-meta">
+                <span class="term-badge">Academic Session 2026-27</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Authentication Main -->
+    <main class="auth-wrapper">
+        <div class="auth-card">
+            
+            <div class="auth-header">
+                <div class="auth-crest">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h2>Student Portal Login</h2>
+                <p>Enter your institutional credentials to access your dashboard</p>
+            </div>
+
+            <form id="loginForm" action="home.html" method="get">
+                
+                <!-- Enrollment Number -->
+                <div class="form-group">
+                    <label class="form-label" for="enrollment">Enrollment / Roll Number</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-id-card input-icon"></i>
+                        <input
+                            type="text"
+                            id="enrollment"
+                            name="enrollment"
+                            class="form-control has-icon"
+                            placeholder="e.g. 24012011001"
+                            required
+                            autocomplete="username"
+                        >
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                        <label class="form-label" for="password" style="margin-bottom:0;">Password</label>
+                        <a href="#" style="font-size:12px; color:var(--accent); text-decoration:none; font-weight:600;" onclick="alert('Please contact college administration or IT support desk to reset your institutional password.')">Forgot Password?</a>
+                    </div>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="form-control has-icon"
+                            placeholder="••••••••"
+                            required
+                            autocomplete="current-password"
+                        >
+                        <i class="fa-solid fa-eye toggle-password" data-target="password" style="position:absolute; right:14px; cursor:pointer; color:var(--text-subtle);"></i>
+                    </div>
+                </div>
+
+                <!-- Remember Me -->
+                <div class="form-group" style="display:flex; justify-content:space-between; align-items:center;">
+                    <label class="checkbox-label" for="remember">
+                        <input type="checkbox" id="remember" name="remember" checked>
+                        <span>Keep me signed in</span>
+                    </label>
+                </div>
+
+                <!-- Action Buttons -->
+                <div style="display:flex; gap:10px; margin-top:20px;">
+                    <button type="submit" class="btn btn-primary" style="flex:1;">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
+                    </button>
+                    <button type="reset" class="btn btn-outline" style="width:90px;">
+                        Clear
+                    </button>
+                </div>
+
+                <!-- Quick Demo Fill Helper -->
+                <div class="demo-credentials-box">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                        <strong><i class="fa-solid fa-key"></i> Quick Evaluation:</strong>
+                        <button type="button" id="demoFillBtn" class="btn btn-sm btn-outline" style="padding:2px 8px; font-size:11px;">
+                            Auto-Fill Demo
+                        </button>
+                    </div>
+                    <span>ID: <code>24012011001</code> | Pass: <code>demo@123</code></span>
+                </div>
+
+            </form>
+
+            <div class="auth-footer">
+                <p>
+                    Don't have a portal account yet?
+                    <a href="registration.html">Register New Student <i class="fa-solid fa-arrow-right"></i></a>
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Institutional Footer -->
+    <footer class="portal-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Apex Institute of Engineering & Technology. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a></li>
+                <li><a href="#"><i class="fa-solid fa-headset"></i> IT Helpdesk</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i> Academic Regulations</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

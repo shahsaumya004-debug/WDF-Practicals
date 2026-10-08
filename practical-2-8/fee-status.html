@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Fee Status</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Institutional Header -->
+    <header class="college-header">
+        <div class="header-inner">
+            <a href="home.html" class="brand-section">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Apex Institute of Engineering & Technology</h1>
+                    <p>Student Academic Information & Learning Management System</p>
+                </div>
+            </a>
+            <div class="header-meta">
+                <span class="term-badge">Session 2026-27 | Semester V</span>
+                <a href="profile.html" class="user-quick-profile">
+                    <div class="avatar-initials">RS</div>
+                    <div class="user-quick-info">
+                        <div class="user-quick-name">Rahul Sharma</div>
+                        <div class="user-quick-role">Student (CE501)</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Unified Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="mobile-toggle-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="home.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="profile.html" class="nav-link"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="courses.html" class="nav-link"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li><a href="attendance.html" class="nav-link"><i class="fa-solid fa-clipboard-user"></i> Attendance</a></li>
+                <li><a href="assignments.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Assignments</a></li>
+                <li><a href="result.html" class="nav-link"><i class="fa-solid fa-chart-simple"></i> Result</a></li>
+                <li><a href="fee-status.html" class="nav-link active"><i class="fa-solid fa-receipt"></i> Fee Status</a></li>
+                <li><a href="announcements.html" class="nav-link"><i class="fa-solid fa-bullhorn"></i> Announcements</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-btn-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="portal-container">
+
+        <!-- Page Header Banner -->
+        <div class="page-header-banner">
+            <div class="page-title-group">
+                <h2><i class="fa-solid fa-receipt"></i> Fee Accounting & Payment Ledger</h2>
+                <p>Track semester tuition dues, fee itemization, and verified transaction payment receipts</p>
+            </div>
+            <div class="banner-actions">
+                <button class="btn btn-outline" onclick="window.print()">
+                    <i class="fa-solid fa-print"></i> Print Statement
+                </button>
+            </div>
+        </div>
+
+        <!-- Fee Summary KPIs -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Total Semester Fee</h3>
+                    <div class="stat-value">₹50,000</div>
+                    <div class="stat-desc">
+                        <span>Session 2026-27</span>
+                    </div>
+                </div>
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Amount Paid</h3>
+                    <div class="stat-value" style="color: #10b981;">₹50,000</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-success"><i class="fa-solid fa-check"></i> Fully Cleared</span>
+                    </div>
+                </div>
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Outstanding Dues</h3>
+                    <div class="stat-value">₹0</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-success">No Pending Dues</span>
+                    </div>
+                </div>
+                <div class="stat-icon amber">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Accounting Status</h3>
+                    <div class="stat-value" style="font-size: 24px; color: #10b981;">PAID</div>
+                    <div class="stat-desc">
+                        <span>Verified by Finance</span>
+                    </div>
+                </div>
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-stamp"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-70-30">
+
+            <!-- Left: Fee Breakdown -->
+            <div>
+                <div class="portal-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fa-solid fa-list-ol"></i> Itemized Fee Structure
+                        </h3>
+                        <span style="font-size: 13px; color: var(--text-muted);">Semester 5 (Undergraduate)</span>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="portal-table">
+                            <thead>
+                                <tr>
+                                    <th>Fee Particulars</th>
+                                    <th>Description</th>
+                                    <th style="text-align: right;">Amount (INR)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Tuition Fee</strong></td>
+                                    <td style="color: var(--text-muted);">Academic instruction and curriculum delivery</td>
+                                    <td style="text-align: right;">₹40,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Laboratory & Workshop Fee</strong></td>
+                                    <td style="color: var(--text-muted);">High performance computing labs & consumable kits</td>
+                                    <td style="text-align: right;">₹3,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Library & Digital Resource Fee</strong></td>
+                                    <td style="color: var(--text-muted);">IEEE Xplore access, physical library and subscriptions</td>
+                                    <td style="text-align: right;">₹1,500.00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Examination & Assessment Fee</strong></td>
+                                    <td style="color: var(--text-muted);">Continuous evaluation & university final exams</td>
+                                    <td style="text-align: right;">₹2,500.00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Student Amenities & Other Charges</strong></td>
+                                    <td style="color: var(--text-muted);">Campus Wi-Fi, sports facilities, and cultural events</td>
+                                    <td style="text-align: right;">₹3,000.00</td>
+                                </tr>
+                                <tr class="row-highlight">
+                                    <td colspan="2"><strong>Total Semester Charges Paid</strong></td>
+                                    <td style="text-align: right; font-size: 16px; color: #1e3c72;"><strong>₹50,000.00</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Next Term Advance Notice -->
+                <div class="portal-card" style="background: #f8fafc;">
+                    <h4 style="font-size: 14px; font-weight: 700; color: var(--primary-dark); margin-bottom: 6px;">
+                        <i class="fa-solid fa-calendar-check"></i> Upcoming Term Billing Notice
+                    </h4>
+                    <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+                        Enrollment and fee payment for Semester 6 will commence on <strong>10th December 2026</strong>. Students who maintain zero arrears will receive priority course elective allocation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Standard Payment Summary Card -->
+            <div>
+                <div class="portal-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fa-solid fa-credit-card"></i> Payment Summary
+                        </h3>
+                        <span class="badge badge-success"><span class="badge-dot"></span> Paid</span>
+                    </div>
+                    <table class="details-table">
+                        <tbody>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <td>TXN9842109438AX</td>
+                            </tr>
+                            <tr>
+                                <th>Payment Date</th>
+                                <td>15-Jul-2026</td>
+                            </tr>
+                            <tr>
+                                <th>Student Name</th>
+                                <td>Rahul S. Sharma</td>
+                            </tr>
+                            <tr>
+                                <th>Enrollment No.</th>
+                                <td>24012011001</td>
+                            </tr>
+                            <tr>
+                                <th>Payment Mode</th>
+                                <td>UPI / Net Banking</td>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <td><span class="badge badge-success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <th>Amount Paid</th>
+                                <td><strong style="color: #10b981; font-size: 15px;">₹50,000.00</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Accounts Division Note -->
+                <div class="portal-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fa-solid fa-circle-info"></i> Accounts Note
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 13px; color: #64748b; line-height: 1.5;">
+                            All fee installments for Semester 5 are verified. For duplicate transaction queries or scholarship certificates, contact Accounts Counter 4.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Institutional Footer -->
+    <footer class="portal-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Apex Institute of Engineering & Technology. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a></li>
+                <li><a href="#"><i class="fa-solid fa-headset"></i> Accounts Helpdesk</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i> Fee Refund Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Announcements</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Institutional Header -->
+    <header class="college-header">
+        <div class="header-inner">
+            <a href="home.html" class="brand-section">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Apex Institute of Engineering & Technology</h1>
+                    <p>Student Academic Information & Learning Management System</p>
+                </div>
+            </a>
+            <div class="header-meta">
+                <span class="term-badge">Session 2026-27 | Semester V</span>
+                <a href="profile.html" class="user-quick-profile">
+                    <div class="avatar-initials">RS</div>
+                    <div class="user-quick-info">
+                        <div class="user-quick-name">Rahul Sharma</div>
+                        <div class="user-quick-role">Student (CE501)</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Unified Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="mobile-toggle-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="home.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="profile.html" class="nav-link"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="courses.html" class="nav-link"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li><a href="attendance.html" class="nav-link"><i class="fa-solid fa-clipboard-user"></i> Attendance</a></li>
+                <li><a href="assignments.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Assignments</a></li>
+                <li><a href="result.html" class="nav-link"><i class="fa-solid fa-chart-simple"></i> Result</a></li>
+                <li><a href="fee-status.html" class="nav-link"><i class="fa-solid fa-receipt"></i> Fee Status</a></li>
+                <li><a href="announcements.html" class="nav-link active"><i class="fa-solid fa-bullhorn"></i> Announcements</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-btn-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="portal-container">
+
+        <!-- Page Header Banner -->
+        <div class="page-header-banner">
+            <div class="page-title-group">
+                <h2><i class="fa-solid fa-bullhorn"></i> Official Campus Circulars & Notice Board</h2>
+                <p>Stay informed with institutional circulars, academic schedules, events, and career opportunities</p>
+            </div>
+            <div class="banner-actions">
+                <span class="badge badge-info" style="font-size: 13px; padding: 8px 14px;">
+                    <i class="fa-solid fa-bell"></i> 5 Active Circulars
+                </span>
+            </div>
+        </div>
+
+        <!-- Practical Requirement Demonstration Banner -->
+        <div class="practical-info-box">
+            <strong><i class="fa-solid fa-bullhorn"></i> Practical Concept Demonstration:</strong>
+            <p>This Notice Board demonstrates <strong>Rendering External JSON Data using Fetch API</strong> with real-time <strong>Search & Category Filter</strong>. Circulars are fetched asynchronously from <code>announcements.json</code> and filtered dynamically as you type or click category tabs.</p>
+        </div>
+
+        <!-- Search and Category Filters -->
+        <div class="grid-70-30" style="margin-bottom: 16px;">
+            <div class="search-wrapper" style="margin-bottom: 0;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    id="announcementSearch"
+                    class="form-control"
+                    placeholder="Search notices by keyword (e.g. exam, placement, fees)..."
+                >
+            </div>
+            <div class="filter-tabs" style="margin-bottom: 0; justify-content: flex-end;">
+                <button class="filter-tab notice-filter-tab active" data-category="all">All</button>
+                <button class="filter-tab notice-filter-tab" data-category="exam">Exam</button>
+                <button class="filter-tab notice-filter-tab" data-category="academic">Academic</button>
+                <button class="filter-tab notice-filter-tab" data-category="event">Events</button>
+                <button class="filter-tab notice-filter-tab" data-category="placement">Placement</button>
+            </div>
+        </div>
+
+        <div class="grid-70-30">
+
+            <!-- Left: Dynamic Notice Feed (Loaded via Fetch API from announcements.json) -->
+            <div id="noticesContainer" class="notice-board-list">
+                <!-- Populated dynamically via Fetch API in script.js -->
+            </div>
+
+            <!-- Right: Upcoming Events & Academic Calendar -->
+            <div>
+                <div class="portal-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fa-solid fa-calendar-star"></i> Featured Event
+                        </h3>
+                    </div>
+
+                    <div class="event-card">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: #eff6ff; color: #2563eb; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 12px;">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 style="font-size: 16px; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px;">
+                            Annual Coding Hackathon 2026
+                        </h3>
+                        <p style="font-size: 12.5px; color: var(--text-muted); margin-bottom: 12px;">
+                            Inter-collegiate competitive algorithmic and web development marathon.
+                        </p>
+                        <div style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px; margin-bottom: 14px; font-size: 12px;">
+                            <div><strong><i class="fa-solid fa-calendar"></i> Date:</strong> 18 August 2026</div>
+                            <div style="margin-top: 4px;"><strong><i class="fa-solid fa-location-dot"></i> Venue:</strong> Computer Lab 2 (New Block)</div>
+                        </div>
+                        <button class="btn btn-primary btn-sm btn-block" onclick="alert('Registration confirmed! Check your student email for event instructions.')">
+                            Register for Event
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Academic Helpdesk -->
+                <div class="portal-card" style="background: #f8fafc;">
+                    <h4 style="font-size: 14px; font-weight: 700; color: var(--primary-dark); margin-bottom: 8px;">
+                        <i class="fa-solid fa-circle-question"></i> Notice Submissions
+                    </h4>
+                    <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.5;">
+                        To publish student society notifications or club circulars, please submit approvals through your designated faculty mentor at least 3 working days in advance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Institutional Footer -->
+    <footer class="portal-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Apex Institute of Engineering & Technology. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a></li>
+                <li><a href="#"><i class="fa-solid fa-headset"></i> IT Helpdesk</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i> Student Handbook</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

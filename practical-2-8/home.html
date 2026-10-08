@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Institutional Header -->
+    <header class="college-header">
+        <div class="header-inner">
+            <a href="home.html" class="brand-section">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Apex Institute of Engineering & Technology</h1>
+                    <p>Student Academic Information & Learning Management System</p>
+                </div>
+            </a>
+            <div class="header-meta">
+                <span class="term-badge">Session 2026-27 | Semester V</span>
+                <a href="profile.html" class="user-quick-profile">
+                    <div class="avatar-initials">RS</div>
+                    <div class="user-quick-info">
+                        <div class="user-quick-name">Rahul Sharma</div>
+                        <div class="user-quick-role">Student (CE501)</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Unified Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="mobile-toggle-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="home.html" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="profile.html" class="nav-link"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="courses.html" class="nav-link"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li><a href="attendance.html" class="nav-link"><i class="fa-solid fa-clipboard-user"></i> Attendance</a></li>
+                <li><a href="assignments.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Assignments</a></li>
+                <li><a href="result.html" class="nav-link"><i class="fa-solid fa-chart-simple"></i> Result</a></li>
+                <li><a href="fee-status.html" class="nav-link"><i class="fa-solid fa-receipt"></i> Fee Status</a></li>
+                <li><a href="announcements.html" class="nav-link"><i class="fa-solid fa-bullhorn"></i> Announcements</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-btn-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="portal-container">
+
+        <!-- Welcome Hero Banner -->
+        <section class="welcome-hero">
+            <div class="welcome-content">
+                <h2>Welcome Back, <span id="studentName">Rahul</span> 👋</h2>
+                <p>
+                    Here is your centralized academic dashboard. Track your lecture attendance, review examination marks, verify pending assignments, and stay updated with campus notices.
+                </p>
+                <div class="welcome-badges">
+                    <span class="hero-pill"><i class="fa-solid fa-calendar-day"></i> Academic Term 2026-27</span>
+                    <span class="hero-pill"><i class="fa-solid fa-shield-check"></i> Status: Active & Enrolled</span>
+                    <span class="hero-pill"><i class="fa-solid fa-check-double"></i> Exam Eligible (92.3%)</span>
+                </div>
+            </div>
+            <div class="banner-actions" style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="profile.html" class="btn btn-outline" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: white;">
+                    <i class="fa-solid fa-user"></i> Student Profile
+                </a>
+                <a href="result.html" class="btn btn-primary" style="background: #ffffff; color: #1e3c72; font-weight: 700;">
+                    <i class="fa-solid fa-file-arrow-down"></i> View Marksheet
+                </a>
+            </div>
+        </section>
+
+        <!-- KPI Stats Grid -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Overall Attendance</h3>
+                    <div class="stat-value" id="attendance">92.31%</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> 192 / 208 Lectures</span>
+                    </div>
+                </div>
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Registered Courses</h3>
+                    <div class="stat-value" id="courses">5</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-info"><i class="fa-solid fa-graduation-cap"></i> 21 Credits Total</span>
+                    </div>
+                </div>
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Pending Tasks</h3>
+                    <div class="stat-value" id="pendingAssignments">2</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-warning"><i class="fa-solid fa-clock"></i> Due this week</span>
+                    </div>
+                </div>
+                <div class="stat-icon amber">
+                    <i class="fa-solid fa-file-pen"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Semester Fee</h3>
+                    <div class="stat-value" id="feeStatus">Paid</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-success"><i class="fa-solid fa-check"></i> Receipt #REC2026001</span>
+                    </div>
+                </div>
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2 Column Layout: Student Info & Announcements -->
+        <div class="grid-70-30">
+            
+            <!-- Left: Student Info & Quick Links -->
+            <div>
+                <!-- Student Info Card -->
+                <div class="portal-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fa-solid fa-address-card"></i> Student Information
+                        </h3>
+                        <a href="profile.html" class="btn btn-sm btn-outline">
+                            View Full Profile <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <table class="details-table">
+                        <tbody>
+                            <tr>
+                                <th>Enrollment Number</th>
+                                <td id="enrollmentNo">24012011001</td>
+                            </tr>
+                            <tr>
+                                <th>Student Full Name</th>
+                                <td id="studentFullName">Rahul S. Sharma</td>
+                            </tr>
+                            <tr>
+                                <th>Department / Branch</th>
+                                <td id="homeDepartment">Computer Engineering</td>
+                            </tr>
+                            <tr>
+                                <th>Current Semester</th>
+                                <td id="homeSemester">Semester 5</td>
+                            </tr>
+                            <tr>
+                                <th>Institutional Email</th>
+                                <td id="homeEmail">rahul.sharma@apex.edu.in</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Quick Navigation Grid -->
+                <div class="portal-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fa-solid fa-bolt"></i> Quick Portal Access
+                        </h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;">
+                        <a href="assignments.html" class="stat-card" style="text-decoration: none; padding: 16px;">
+                            <div>
+                                <h3 style="margin-bottom: 4px;">Assignments</h3>
+                                <p style="font-size: 12px; color: var(--text-muted);">Submit pending tasks</p>
+                            </div>
+                            <div class="stat-icon amber" style="width: 36px; height: 36px; font-size: 16px;">
+                                <i class="fa-solid fa-file-arrow-up"></i>
+                            </div>
+                        </a>
+                        <a href="attendance.html" class="stat-card" style="text-decoration: none; padding: 16px;">
+                            <div>
+                                <h3 style="margin-bottom: 4px;">Attendance</h3>
+                                <p style="font-size: 12px; color: var(--text-muted);">Subject-wise breakdown</p>
+                            </div>
+                            <div class="stat-icon green" style="width: 36px; height: 36px; font-size: 16px;">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                        </a>
+                        <a href="fee-status.html" class="stat-card" style="text-decoration: none; padding: 16px;">
+                            <div>
+                                <h3 style="margin-bottom: 4px;">Fee Receipts</h3>
+                                <p style="font-size: 12px; color: var(--text-muted);">Download vouchers</p>
+                            </div>
+                            <div class="stat-icon purple" style="width: 36px; height: 36px; font-size: 16px;">
+                                <i class="fa-solid fa-receipt"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Latest Announcements & Notices -->
+            <div>
+                <div class="portal-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fa-solid fa-bell"></i> Campus Notices
+                        </h3>
+                        <a href="announcements.html" class="btn btn-sm btn-outline">All <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div id="announcementList">
+                        <!-- Populated dynamically via script.js -->
+                    </div>
+                </div>
+
+                <!-- Academic Advisor Widget -->
+                <div class="portal-card" style="background: linear-gradient(135deg, #f8fafc, #edf2f7);">
+                    <h4 style="font-size: 14px; font-weight: 700; color: var(--primary-dark); margin-bottom: 8px;">
+                        <i class="fa-solid fa-user-tie"></i> Faculty Advisor
+                    </h4>
+                    <p style="font-size: 13px; font-weight: 600; color: var(--text-main);">Dr. A. K. Verma</p>
+                    <p style="font-size: 12px; color: var(--text-muted);">Associate Professor, CE Dept</p>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;"><i class="fa-solid fa-envelope"></i> ak.verma@apex.edu.in</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Institutional Footer -->
+    <footer class="portal-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Apex Institute of Engineering & Technology. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a></li>
+                <li><a href="#"><i class="fa-solid fa-headset"></i> IT Helpdesk</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i> Student Handbook</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

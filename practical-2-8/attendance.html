@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Attendance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Institutional Header -->
+    <header class="college-header">
+        <div class="header-inner">
+            <a href="home.html" class="brand-section">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Apex Institute of Engineering & Technology</h1>
+                    <p>Student Academic Information & Learning Management System</p>
+                </div>
+            </a>
+            <div class="header-meta">
+                <span class="term-badge">Session 2026-27 | Semester V</span>
+                <a href="profile.html" class="user-quick-profile">
+                    <div class="avatar-initials">RS</div>
+                    <div class="user-quick-info">
+                        <div class="user-quick-name">Rahul Sharma</div>
+                        <div class="user-quick-role">Student (CE501)</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Unified Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="mobile-toggle-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="home.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="profile.html" class="nav-link"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="courses.html" class="nav-link"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li><a href="attendance.html" class="nav-link active"><i class="fa-solid fa-clipboard-user"></i> Attendance</a></li>
+                <li><a href="assignments.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Assignments</a></li>
+                <li><a href="result.html" class="nav-link"><i class="fa-solid fa-chart-simple"></i> Result</a></li>
+                <li><a href="fee-status.html" class="nav-link"><i class="fa-solid fa-receipt"></i> Fee Status</a></li>
+                <li><a href="announcements.html" class="nav-link"><i class="fa-solid fa-bullhorn"></i> Announcements</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-btn-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="portal-container">
+
+        <!-- Page Header Banner -->
+        <div class="page-header-banner">
+            <div class="page-title-group">
+                <h2><i class="fa-solid fa-clipboard-user"></i> Attendance Management & Analytics</h2>
+                <p>Monitor your lecture attendance compliance as per university 75% minimum criteria</p>
+            </div>
+            <div class="banner-actions">
+                <span class="badge badge-success" style="font-size: 13px; padding: 8px 14px;">
+                    <i class="fa-solid fa-circle-check"></i> Examination Eligible (92.31%)
+                </span>
+            </div>
+        </div>
+
+        <!-- Attendance Overview KPI Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Overall Percentage</h3>
+                    <div class="stat-value" style="color: #10b981;">92.31%</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-success">Above 75% Threshold</span>
+                    </div>
+                </div>
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Attended Lectures</h3>
+                    <div class="stat-value">192</div>
+                    <div class="stat-desc">
+                        <span>Classes Present</span>
+                    </div>
+                </div>
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-check-double"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Total Conducted</h3>
+                    <div class="stat-value">208</div>
+                    <div class="stat-desc">
+                        <span>Total Scheduled</span>
+                    </div>
+                </div>
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Permissible Leaves</h3>
+                    <div class="stat-value">36</div>
+                    <div class="stat-desc">
+                        <span class="badge badge-info">Buffer Remaining</span>
+                    </div>
+                </div>
+                <div class="stat-icon amber">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-70-30">
+
+            <!-- Left: Subject Wise Attendance -->
+            <div>
+                <div class="portal-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fa-solid fa-book-bookmark"></i> Subject Wise Attendance Breakdown
+                        </h3>
+                        <span style="font-size: 13px; color: var(--text-muted);">Semester 5</span>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="portal-table">
+                            <thead>
+                                <tr>
+                                    <th>Subject Name</th>
+                                    <th>Attended / Total</th>
+                                    <th style="width: 140px;">Percentage</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>Object Oriented Programming</strong>
+                                        <div style="font-size: 11px; color: #94a3b8;">Course Code: CE501</div>
+                                    </td>
+                                    <td>42 / 45</td>
+                                    <td><strong>93.33%</strong></td>
+                                    <td><span class="badge badge-success"><span class="badge-dot"></span> Excellent</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Discrete Mathematics</strong>
+                                        <div style="font-size: 11px; color: #94a3b8;">Course Code: CE502</div>
+                                    </td>
+                                    <td>39 / 44</td>
+                                    <td><strong>88.64%</strong></td>
+                                    <td><span class="badge badge-success"><span class="badge-dot"></span> Safe</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Fundamentals of Computer Networks</strong>
+                                        <div style="font-size: 11px; color: #94a3b8;">Course Code: CE503</div>
+                                    </td>
+                                    <td>36 / 40</td>
+                                    <td><strong>90.00%</strong></td>
+                                    <td><span class="badge badge-success"><span class="badge-dot"></span> Safe</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Fundamentals of Data Structures and Algorithms</strong>
+                                        <div style="font-size: 11px; color: #94a3b8;">Course Code: CE504</div>
+                                    </td>
+                                    <td>41 / 43</td>
+                                    <td><strong>95.35%</strong></td>
+                                    <td><span class="badge badge-success"><span class="badge-dot"></span> Outstanding</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Web Development Framework</strong>
+                                        <div style="font-size: 11px; color: #94a3b8;">Course Code: CE505</div>
+                                    </td>
+                                    <td>34 / 36</td>
+                                    <td><strong>94.44%</strong></td>
+                                    <td><span class="badge badge-success"><span class="badge-dot"></span> Excellent</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Today's Schedule -->
+            <div>
+                <div class="portal-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fa-solid fa-clock"></i> Today's Schedule
+                        </h3>
+                        <span class="badge badge-secondary">Thursday</span>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="portal-table">
+                            <thead>
+                                <tr>
+                                    <th>Time Slot</th>
+                                    <th>Subject / Session</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>09:10 - 10:10</strong></td>
+                                    <td>Object Oriented Programming (Lab)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>10:10 - 11:10</strong></td>
+                                    <td>Discrete Mathematics (Tutorial)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>11:20 - 12:20</strong></td>
+                                    <td>Computer Networks (Lecture)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>01:20 - 02:20</strong></td>
+                                    <td>Data Structures & Algorithms</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>02:30 - 03:30</strong></td>
+                                    <td>Web Development Framework (Lab)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Academic Regulation Note -->
+                <div class="portal-card" style="background: #f0fdf4; border: 1px solid #bbf7d0;">
+                    <h4 style="color: #166534; font-size: 14px; font-weight: 700; margin-bottom: 6px;">
+                        <i class="fa-solid fa-award"></i> University Examination Norm
+                    </h4>
+                    <p style="font-size: 12.5px; color: #14532d; line-height: 1.5;">
+                        As per University Regulation Clause 4.2, students maintaining over 85% aggregate attendance are awarded full continuous evaluation marks.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Institutional Footer -->
+    <footer class="portal-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Apex Institute of Engineering & Technology. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a></li>
+                <li><a href="#"><i class="fa-solid fa-headset"></i> IT Helpdesk</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i> Student Handbook</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
