@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "fullname": "Test Student",
+        "enrollment": "24012011099",
+        "email": "teststudent@apex.edu.in",
+        "mobile": "9876543210",
+        "department": "Computer Engineering",
+        "semester": "Semester 5",
+        "created_at": "2026-10-22 15:55:49"
+    },
+    {
+        "id": 2,
+        "fullname": "saumya shah",
+        "enrollment": "230346616001",
+        "email": "d26dcs158@charusat.edu.in",
+        "mobile": "9512311356",
+        "department": "Computer Engineering",
+        "semester": "Semester 2",
+        "created_at": "2026-10-22 15:59:08"
+    },
+    {
+        "id": 3,
+        "fullname": "rahul",
+        "enrollment": "345342554654",
+        "email": "rahul@apex.edu.in",
+        "mobile": "9512311356",
+        "department": "Information Technology",
+        "semester": "Semester 6",
+        "created_at": "2026-10-22 16:21:01"
+    }
+]

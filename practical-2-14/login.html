@@ -39,11 +39,11 @@
                 <p>Enter your institutional credentials to access your dashboard</p>
             </div>
 
-            <form id="loginForm" action="home.html" method="get">
+            <form id="loginForm" action="login.php" method="post">
                 
                 <!-- Enrollment Number -->
                 <div class="form-group">
-                    <label class="form-label" for="enrollment">Enrollment / Roll Number</label>
+                    <label class="form-label" for="enrollment">Enrollment / Email</label>
                     <div class="input-wrapper">
                         <i class="fa-solid fa-id-card input-icon"></i>
                         <input
@@ -51,7 +51,7 @@
                             id="enrollment"
                             name="enrollment"
                             class="form-control has-icon"
-                            placeholder="e.g. 24012011001"
+                            placeholder="e.g. 24012011001 or name@domain.com"
                             required
                             autocomplete="username"
                         >
@@ -81,8 +81,8 @@
 
                 <!-- Remember Me -->
                 <div class="form-group" style="display:flex; justify-content:space-between; align-items:center;">
-                    <label class="checkbox-label" for="remember">
-                        <input type="checkbox" id="remember" name="remember" checked>
+                    <label class="checkbox-label" for="remember_me">
+                        <input type="checkbox" id="remember_me" name="remember_me" checked>
                         <span>Keep me signed in</span>
                     </label>
                 </div>
@@ -105,7 +105,7 @@
                             Auto-Fill Demo
                         </button>
                     </div>
-                    <span>ID: <code>24012011001</code> | Pass: <code>demo@123</code></span>
+                    <span>Admin: <code>admin@apex.edu.in</code> | Pass: <code>admin123</code></span>
                 </div>
 
             </form>

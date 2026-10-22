@@ -51,7 +51,7 @@
                 <li><a href="announcements.html" class="nav-link"><i class="fa-solid fa-bullhorn"></i> Announcements</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="login.html" class="nav-btn-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                <a href="logout.php" class="nav-btn-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
             </div>
         </div>
     </nav>
@@ -240,6 +240,38 @@
                     <p style="font-size: 13px; font-weight: 600; color: var(--text-main);">Dr. A. K. Verma</p>
                     <p style="font-size: 12px; color: var(--text-muted);">Associate Professor, CE Dept</p>
                     <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;"><i class="fa-solid fa-envelope"></i> ak.verma@apex.edu.in</p>
+                </div>
+
+                <!-- Contact Us Form -->
+                <div class="portal-card" style="margin-top: 18px;">
+                    <div class="card-header">
+                        <h3 class="card-title"><i class="fa-solid fa-envelope-circle-check"></i> Contact Us</h3>
+                    </div>
+
+                    <div id="formAlertBanner" class="form-alert-banner">
+                        <i class="fa-solid fa-circle-exclamation" style="font-size: 18px;"></i>
+                        <div id="formAlertText"></div>
+                    </div>
+
+                    <form id="contactForm" action="contact.php" method="post">
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label class="form-label" for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label class="form-label" for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Write a subject" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    </form>
                 </div>
             </div>
 

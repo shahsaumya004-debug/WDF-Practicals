@@ -1,0 +1,4 @@
+id,fullname,enrollment,email,mobile,department,semester,created_at
+"1","Test Student","24012011099","teststudent@apex.edu.in","9876543210","Computer Engineering","Semester 5","2026-10-22 15:55:49"
+"2","saumya shah","230346616001","d26dcs158@charusat.edu.in","9512311356","Computer Engineering","Semester 2","2026-10-22 15:59:08"
+"3","rahul","345342554654","rahul@apex.edu.in","9512311356","Information Technology","Semester 6","2026-10-22 16:21:01"

@@ -26,10 +26,29 @@ document.addEventListener('DOMContentLoaded', () => {
         setupRegisterPage();
     }
 
+    setupServerFormAlerts();
+
     if (document.getElementById('semesterSelect')) {
         setupResultSemesterFilter();
     }
 });
+
+function setupServerFormAlerts() {
+    const alertBanner = document.getElementById('formAlertBanner');
+    const alertText = document.getElementById('formAlertText');
+    if (!alertBanner || !alertText) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get('status');
+    const message = params.get('message');
+
+    if (!status || !message) return;
+
+    const type = status === 'success' ? 'success' : 'error';
+    alertBanner.className = `form-alert-banner ${type}`;
+    alertText.textContent = decodeURIComponent(message.replace(/\+/g, ' '));
+    alertBanner.style.display = 'flex';
+}
 
 
 /* ==============================================================================
@@ -470,8 +489,8 @@ function setupLoginPage() {
         demoBtn.addEventListener('click', () => {
             const enrollInput = document.getElementById('enrollment');
             const passInput = document.getElementById('password');
-            if (enrollInput) enrollInput.value = '24012011001';
-            if (passInput) passInput.value = 'demo@123';
+            if (enrollInput) enrollInput.value = 'admin@apex.edu.in';
+            if (passInput) passInput.value = 'admin123';
         });
     }
 
@@ -547,8 +566,6 @@ function setupRegisterPage() {
 
     if (form) {
         form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
             const fullname = document.getElementById('fullname')?.value.trim();
             const enroll = document.getElementById('enrollment')?.value.trim();
             const email = document.getElementById('email')?.value.trim();
@@ -557,30 +574,30 @@ function setupRegisterPage() {
             const terms = document.getElementById('terms')?.checked;
 
             if (!fullname || !enroll || !email || !pass || !confirm) {
+                e.preventDefault();
                 showAlert('Please fill in all mandatory required fields.', 'error');
                 return;
             }
 
             if (pass.length < 8) {
+                e.preventDefault();
                 showAlert('Password must contain at least 8 characters.', 'error');
                 return;
             }
 
             if (pass !== confirm) {
+                e.preventDefault();
                 showAlert('Passwords do not match. Please verify.', 'error');
                 return;
             }
 
             if (!terms) {
+                e.preventDefault();
                 showAlert('Please agree to the College IT policy to proceed.', 'error');
                 return;
             }
 
-            // Success state
-            showAlert('Registration successful! Redirecting to dashboard...', 'success');
-            setTimeout(() => {
-                window.location.href = 'home.html';
-            }, 1200);
+            showAlert('Submitting registration...', 'success');
         });
     }
 
